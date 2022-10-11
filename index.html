@@ -9,19 +9,35 @@
   </head>
   <body>
     <div class="sidebar">
+      <div class="logo">Admin Dashboard</div>
       <div class="side-top">
-        LOGO
-        <a href="index.html"> Overview </a>
-        <a href="index.html">Tickets</a>
-        <a href="index.html">Ideas</a>
-        <a href="index.html">Contacts</a>
-        <a href="index.html">Agents</a>
-        <a href="index.html">Articles</a>
+        <div>
+          <a href="index.html"> Overview </a>
+        </div>
+        <div>
+          <a href="index.html">Tickets</a>
+        </div>
+        <div>
+          <a href="index.html">Ideas</a>
+        </div>
+        <div>
+          <a href="index.html">Contacts</a>
+        </div>
+        <div>
+          <a href="index.html">Agents</a>
+        </div>
+        <div>
+          <a href="index.html">Articles</a>
+        </div>
       </div>
 
       <div class="side-bottom">
-        <a href="index.html">Settings</a>
-        <a href="index.html">Subscription</a>
+        <div>
+          <a href="index.html">Settings</a>
+        </div>
+        <div>
+          <a href="index.html">Subscription</a>
+        </div>
       </div>
     </div>
 
@@ -31,11 +47,10 @@
       </div>
 
       <div class="right">
-        <p>Search</p>
-        <p>Notifications</p>
-
-        <p>User</p>
-        <p>Userpic</p>
+        <img src="./icons/bell.png" alt="" />
+        <img src="./icons/magnify.png" alt="" />
+        <p>Benjamin</p>
+        <img src="./icons/account.png" alt="" />
       </div>
     </div>
 
@@ -106,8 +121,8 @@
     <div class="bottom">
       <div class="card-bottom">
         <div class="row1">
-          <div>Unresolved Tickets</div>
-          <div>View Details</div>
+          <div class="left">Unresolved Tickets</div>
+          <div class="right">View Details</div>
         </div>
 
         <div class="row2">
@@ -127,11 +142,66 @@
           <div class="right">240</div>
         </div>
       </div>
-      <div class="card-bottom">
-        <div class="tasks">
-          <div class="left"></div>
 
-          <div class="right"></div>
+      <div class="card-bottom">
+        <div class="row1">
+          <div class="left">Tasks</div>
+          <div class="right">View All</div>
+        </div>
+
+        <div class="row2">
+          <div class="left">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="vehicle3"
+              name="vehicle3"
+              value="Boat"
+            />
+            <label for="vehicle3"> Finish Ticket</label><br />
+          </div>
+          <div class="rights">URGENT</div>
+        </div>
+        <div class="row3">
+          <div class="left">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="vehicle3"
+              name="vehicle3"
+              value="Boat"
+            />
+            <label for="vehicle3"> Create New Ticket</label><br />
+          </div>
+          <div class="rights">NEW</div>
+        </div>
+
+        <div class="row4">
+          <div class="left">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="vehicle3"
+              name="vehicle3"
+              value="Boat"
+            />
+            <label for="vehicle3"> Update Ticket Report</label><br />
+          </div>
+          <div class="rights">DEFAULT</div>
+        </div>
+
+        <div class="row5">
+          <div class="left">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="vehicle3"
+              name="vehicle3"
+              value="Boat"
+            />
+            <label for="vehicle3"> Close Ticket Report</label><br />
+          </div>
+          <div class="rights">ASSIGNED</div>
         </div>
       </div>
     </div>

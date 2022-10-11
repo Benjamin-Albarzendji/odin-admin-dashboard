@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", "Helvetica Neue";
   display: grid;
-  max-height: 100vh;
+  max-height: 99vh;
   grid-template-columns: 15% 1fr;
   grid-template-rows: 7% 1fr 2fr 2fr;
   margin: 0;
@@ -17,38 +17,91 @@ a {
 .sidebar {
   background-color: #363740;
   grid-area: 1/1/7/1;
-  height: auto;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90% 10%;
+  grid-template-rows: 5% 78% 10%;
+  gap: 2%;
+}
+
+.logo{
+    display: grid;
+    justify-items: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+.sidebar .side-top > *:hover {
+  background-color: rgba(245, 245, 245, 0.129);
+  height: 100%;
+}
+
+.sidebar .side-top div > * {
+  display: grid;
+  height: 100%;
   justify-items: center;
+  align-items: center;
 }
 
 .side-top {
   display: grid;
+  width: 100%;
+  align-items: center;
   grid-template-rows: repeat(auto-fill, minmax(5%, 5%));
 }
 
 .side-bottom {
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
-  align-items: flex-end;
-  margin-bottom: 10%;
+  width: 100%;
+  
 }
+
+.sidebar .side-bottom div > * {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    
+    
+  }
+
+.sidebar .side-bottom > *:hover {
+    background-color: rgba(245, 245, 245, 0.129);
+    height: 100%;
+    
+  }
 
 .overviewBar {
   grid-area: 1/2/1/-1;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 85% 15%;
+  align-items: center;
   margin-right: 2%;
+}
+
+.overviewBar .left {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .overviewBar .right {
   display: grid;
   justify-items: end;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
   overflow: hidden;
+}
+
+.overviewBar img {
+  width: 55%;
+  height: auto;
+}
+.overviewBar .right > *:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .status {
@@ -83,6 +136,10 @@ a {
   font-size: 1.7rem;
   font-weight: bold;
 }
+.card:hover {
+  border: blue solid 2px;
+  color: blue;
+}
 
 .main {
   grid-area: 3/2/3/-1;
@@ -97,11 +154,13 @@ a {
 .main .chart {
   border-right: gainsboro solid 2px;
   position: relative;
+  background-color: white;
+  border-top-left-radius: 10px;
 }
 
 .main .chart p {
   position: absolute;
-  bottom: 90%;
+  bottom: 85%;
   left: 2%;
   font-weight: bold;
 }
@@ -110,11 +169,13 @@ a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-bottom-left-radius: 2px;
 }
 
 .main .statistics {
   display: grid;
   grid-template-rows: repeat(4, minmax(0, 1fr));
+  border-bottom-right-radius: 90px;
 }
 .main .statistics > div {
   display: grid;
@@ -123,13 +184,20 @@ a {
   grid-template-rows: 1fr 2fr;
   background-color: white;
 }
+
+.main .statistics > div:first-child {
+  border-top-right-radius: 10px;
+}
+.main .statistics > div:last-child {
+  border-bottom-right-radius: 10px;
+}
 .stat-top {
   color: #9fa2b4;
   font-size: 1rem;
 }
 
 .stat-bottom {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -151,21 +219,80 @@ a {
   border-radius: 10px;
   background-color: white;
 }
+
 .card-bottom > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
   font-size: 0.8rem;
   padding: 15px;
 }
+.card-bottom > div > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
-.card-bottom > div:not(:last-child) {
+.card-bottom .row1 .left {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-bottom .row1 .right {
+  color: #3751ff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.card-bottom .row1 .right:hover {
+  color: #3751ff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.card-bottom > div:not(:last-child):not(:first-child) {
   border-bottom: gainsboro solid 2px;
-  
 }
 .card-bottom:last-child {
   margin-right: 3.5%;
 }
 .card-bottom .right {
   color: #9fa2b4;
+  font-size: 0.8rem;
+}
+
+.card-bottom .rights {
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  width: 10%;
+  border-radius: 3px;
+  font-size: 0.7em;
+}
+
+.card-bottom .row2 .rights {
+  background-color: orange;
+}
+
+.card-bottom .row3 .rights {
+  background-color: rgb(79, 188, 79);
+}
+
+.card-bottom .row4 .rights {
+  background-color: rgb(161, 161, 161);
+}
+
+.card-bottom .row5 .rights {
+  background-color: rgb(7, 7, 198);
+}
+
+.checkbox {
+  vertical-align: middle;
+  border: red solid 2px;
+  cursor: pointer;
   font-size: 0.8rem;
 }
