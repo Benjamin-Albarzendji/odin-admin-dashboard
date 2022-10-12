@@ -4,5 +4,4 @@
 
 
 ### Description
-#### This is just a simple Rock Paper Scissor game for the Odin Project. The design leaves a lot to be desired. You play a five round game against the computer by pressing one of the three buttons. You are then prompted if you want to play again.
-
+#### This is just a project I did to deepen my skills in more advanced CSS such as with Grid (90% of the layout is done in Grid), Flexbox, selectors and pseudo classes. It was the first time using grid so it took some trial and error until I found a balance that could work. The project is not fully flexible. 
